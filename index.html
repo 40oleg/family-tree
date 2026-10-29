@@ -50,7 +50,7 @@
         <div class="controls">
           <input type="search" id="search" list="people-list" placeholder="Найти человека…" aria-label="Найти человека" autocomplete="off">
           <datalist id="people-list"></datalist>
-          <label class="toggle"><input type="checkbox" id="hyp-toggle"> Возможные родственники</label>
+          <label class="toggle"><input type="checkbox" id="hyp-toggle" checked> Возможные родственники</label>
           <div class="zoom">
             <button type="button" class="btn" id="zoom-out" aria-label="Отдалить">−</button>
             <button type="button" class="btn" id="zoom-in" aria-label="Приблизить">+</button>
@@ -63,7 +63,7 @@
         <svg id="tree-svg" role="group" aria-label="Родословное дерево"></svg>
         <aside id="panel" class="panel" hidden aria-live="polite"></aside>
       </div>
-      <p class="hint">Колёсико мыши или два пальца — масштаб, перетаскивание — сдвиг. Нажмите на человека, чтобы открыть факты и источники. Наведите на линию, чтобы увидеть, чем подтверждена связь.</p>
+      <p class="hint">Колёсико мыши или два пальца — масштаб, перетаскивание — сдвиг. Нажмите на человека, чтобы открыть факты и источники. Наведите на линию, чтобы увидеть, чем подтверждена связь. Серые пунктирные карточки — возможные родственники: родство не доказано, переключатель «Возможные родственники» их скрывает.</p>
       <noscript><p class="hint">Для интерактивного дерева нужен JavaScript.</p></noscript>
     </div>
   </section>
@@ -87,7 +87,7 @@
   <section id="candidates" class="section">
     <div class="wrap">
       <h2>Возможные родственники и однофамильцы</h2>
-      <p class="sub">Эти люди могут быть нашими, но доказательств нет. Для каждого указано, что совпадает и что не совпадает. В дерево как факт они не внесены; часть из них можно показать переключателем «Возможные родственники» над деревом.</p>
+      <p class="sub">Эти люди могут быть нашими, но доказательств нет. Для каждого указано, что совпадает и что не совпадает. В дерево как факт они не внесены: часть из них показана на схеме серыми пунктирными карточками с пометкой «гипотеза».</p>
       <div id="candidates-body"></div>
     </div>
   </section>

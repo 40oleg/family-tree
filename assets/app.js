@@ -66,7 +66,7 @@
   vp.append(gDeco, gEdges, gNodes);
   svg.append(vp);
 
-  let showHyp = false;
+  let showHyp = true; // возможные родственники видны пунктиром; переключатель их скрывает
 
   function linkTip(a, b, r, keys) {
     const src = sourceTitles(keys);
@@ -651,6 +651,7 @@
   renderCandidates();
   renderPlan();
   renderSources();
+  setHyp(showHyp);
   fitTexts();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitTexts);
 
