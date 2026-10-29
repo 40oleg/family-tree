@@ -5,10 +5,12 @@
 
   const D = window.FAMILY;
   const NS = 'http://www.w3.org/2000/svg';
-  const SX = 208; // шаг по горизонтали между соседями
-  const NW = 184; // ширина карточки
-  const NH = 102; // высота карточки
+  const SX = 272; // шаг по горизонтали между соседями
+  const NW = 248; // ширина карточки
+  const NH = 100; // высота карточки
   const RY = 196; // шаг между поколениями
+  const PH = { x: 10, y: 14, w: 54, h: 72 }; // место под фото в карточке
+  const TX = PH.x + PH.w + 10; // отступ текста справа от фото
   const REL = {
     doc: 'подтверждено документом',
     prob: 'вероятно',
@@ -64,7 +66,9 @@
   const gNodes = sv('g', { class: 'nodes' });
   gDeco.append(gLabels);
   vp.append(gDeco, gEdges, gNodes);
-  svg.append(vp);
+  svg.append(
+    sv('defs', {}, sv('clipPath', { id: 'ph-clip', clipPathUnits: 'objectBoundingBox' }, sv('rect', { width: 1, height: 1, rx: 0.15, ry: 0.11 }))),
+    vp);
 
   let showHyp = true; // возможные родственники видны пунктиром; переключатель их скрывает
 
@@ -131,6 +135,37 @@
     });
   }
 
+  // Заглушка на месте фото: силуэт и надпись «фото пока нет».
+  function photoPlaceholder() {
+    const mx = PH.x + PH.w / 2;
+    return [
+      sv('circle', { class: 'ph-fig', cx: mx, cy: PH.y + 19, r: 8 }),
+      sv('path', { class: 'ph-fig', d: `M${mx - 14},${PH.y + 44}q0-13 14-13q14 0 14 13z` }),
+      sv('text', { class: 'ph-t', x: mx, y: PH.y + 56 }, 'фото'),
+      sv('text', { class: 'ph-t', x: mx, y: PH.y + 66 }, 'пока нет')
+    ];
+  }
+
+  function photoSlot(p) {
+    const g = sv('g', { class: 'ph' });
+    g.append(sv('rect', { class: 'ph-bg', x: PH.x, y: PH.y, width: PH.w, height: PH.h, rx: 8 }));
+    if (!p.photo) {
+      append(g, photoPlaceholder());
+      return g;
+    }
+    const im = sv('image', {
+      x: PH.x, y: PH.y, width: PH.w, height: PH.h, href: p.photo.src,
+      preserveAspectRatio: 'xMidYMid slice', 'clip-path': 'url(#ph-clip)'
+    });
+    im.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', p.photo.src);
+    im.addEventListener('error', () => {
+      im.remove();
+      append(g, photoPlaceholder());
+    });
+    g.append(im);
+    return g;
+  }
+
   function pillFor(p) {
     if (p.hyp) return { t: 'гипотеза', c: 'hyp' };
     if (p.f) return { t: p.r === 'prob' ? 'новое · вероятно' : 'новое', c: 'found' };
@@ -145,9 +180,9 @@
         class: cls, 'data-id': p.id, tabindex: '0', role: 'button', 'aria-label': label,
         transform: `translate(${cx(p) - NW / 2},${top(p)})`
       });
-      g.append(sv('rect', { class: 'card', width: NW, height: NH, rx: 12 }));
-      [[p.n1, 'n1', 28], [p.n2, 'n2', 49], [p.y, 'yr', 71], [p.role, 'role', 91]].forEach(([t, c, y]) => {
-        if (t) g.append(sv('text', { class: c, x: NW / 2, y }, t));
+      g.append(sv('rect', { class: 'card', width: NW, height: NH, rx: 12 }), photoSlot(p));
+      [[p.n1, 'n1', 30], [p.n2, 'n2', 50], [p.y, 'yr', 70], [p.role, 'role', 89]].forEach(([t, c, y]) => {
+        if (t) g.append(sv('text', { class: c, x: TX, y }, t));
       });
       const pill = pillFor(p);
       if (pill) {
@@ -188,7 +223,7 @@
         t.style.fontSize = '';
         let fs = parseFloat(getComputedStyle(t).fontSize) || 13;
         let guard = 0;
-        while (t.getComputedTextLength() > NW - 16 && fs > 8 && guard++ < 24) {
+        while (t.getComputedTextLength() > NW - TX - 10 && fs > 8 && guard++ < 24) {
           fs -= 0.5;
           t.style.fontSize = fs + 'px';
         }
@@ -415,18 +450,32 @@
         h('span', { class: 'rel-v' }, arr.map(q => personBtn(q, () => select(q.id, true)))))));
   }
 
+  function photoBlock(p) {
+    if (!p.photo) return h('div', { class: 'p-photo none' }, 'Фото пока нет');
+    const so = D.sources[p.photo.s] || { t: p.photo.credit };
+    return h('button', {
+      type: 'button', class: 'p-photo', title: 'Открыть фото',
+      onclick: () => openScan({ src: p.photo.src, cap: p.photo.cap }, so)
+    }, h('img', { src: p.photo.src, alt: p.photo.cap }));
+  }
+
   function renderPanel(p, fam) {
     panel.textContent = '';
     const badge = p.hyp
       ? h('span', { class: 'badge hyp' }, 'возможный родственник — родство не доказано')
       : p.f ? h('span', { class: 'badge found' }, 'найден в ходе исследования')
         : h('span', { class: 'badge known' }, 'известен от семьи');
+    const photoSrc = p.photo && D.sources[p.photo.s];
     append(panel, [
       h('button', { type: 'button', class: 'p-close', 'aria-label': 'Закрыть карточку', onclick: clearSelection }, '×'),
-      h('div', { class: 'p-role' }, p.role),
-      h('h2', { class: 'p-name' + (p.f ? ' found' : '') }, p.full),
-      p.y ? h('div', { class: 'p-years' }, p.y) : null,
-      h('div', { class: 'p-badges' }, badge, p.living ? h('span', { class: 'badge known' }, 'о живущих — только имя') : null),
+      h('div', { class: 'p-head' },
+        photoBlock(p),
+        h('div', {},
+          h('div', { class: 'p-role' }, p.role),
+          h('h2', { class: 'p-name' + (p.f ? ' found' : '') }, p.full),
+          p.y ? h('div', { class: 'p-years' }, p.y) : null,
+          h('div', { class: 'p-badges' }, badge, p.living ? h('span', { class: 'badge known' }, 'о живущих — только имя') : null))),
+      p.photo ? h('p', { class: 'p-credit' }, p.photo.credit, photoSrc ? h('span', { class: 'src-links' }, links(photoSrc)) : null) : null,
       p.alt ? h('p', { class: 'p-alt' }, p.alt) : null,
       h('h3', {}, 'Факты и источники'),
       h('ul', { class: 'facts' }, p.facts.map(factItem)),
@@ -626,6 +675,7 @@
     const used = {};
     const note = (k, who) => { (used[k] = used[k] || new Set()).add(who); };
     D.people.forEach(p => p.facts.forEach(f => (f.s || []).forEach(k => note(k, p.full))));
+    D.people.forEach(p => { if (p.photo && p.photo.s) note(p.photo.s, p.full); });
     D.places.forEach(pl => pl.facts.forEach(f => (f.s || []).forEach(k => note(k, pl.name))));
     document.getElementById('sources-body').append(h('ol', { class: 'src-list' }, Object.keys(D.sources).map(k => {
       const so = D.sources[k];

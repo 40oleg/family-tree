@@ -26,6 +26,8 @@
   --fam-bg: #efe8f6;
   --me: #9a3f12;
   --sel: #2156c9;
+  --ph-bg: #efebe1;
+  --ph-fig: #d3ccbb;
   --shadow: 0 1px 2px rgba(30, 30, 20, .06), 0 6px 18px rgba(30, 30, 20, .06);
   color-scheme: light;
 }
@@ -57,6 +59,8 @@
     --fam-bg: #2c2338;
     --me: #f3a171;
     --sel: #7aa5ff;
+    --ph-bg: #2b2f36;
+    --ph-fig: #4a515b;
     --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px rgba(0, 0, 0, .3);
     color-scheme: dark;
   }
@@ -136,7 +140,12 @@ section { scroll-margin-top: 52px; }
 .node.found .card { fill: var(--found-bg); stroke: var(--found); stroke-width: 2.2; }
 .node.hyp .card { fill: var(--hyp-bg); stroke: var(--hyp); stroke-dasharray: 5 4; stroke-width: 1.6; }
 .node.me .card { stroke: var(--me); stroke-width: 3; }
-.node text { text-anchor: middle; }
+.node text { text-anchor: start; }
+.node .ph-t, .node .pill text { text-anchor: middle; }
+.ph-bg { fill: var(--ph-bg); stroke: var(--line); stroke-width: 1; }
+.node.found .ph-bg, .node.hyp .ph-bg { fill: var(--surface); }
+.ph-fig { fill: var(--ph-fig); }
+.node .ph-t { font: 400 10px 'PT Sans', sans-serif; fill: var(--muted); }
 .node .n1 { font: 700 15px 'PT Sans', sans-serif; fill: var(--ink); }
 .node.found .n1 { fill: var(--found-ink); }
 .node .n2 { font: 400 14px 'PT Sans', sans-serif; fill: var(--ink-2); }
@@ -181,6 +190,18 @@ section { scroll-margin-top: 52px; }
   float: right; position: sticky; top: 0; margin: -4px -6px 0 8px; width: 36px; height: 36px; border-radius: 50%;
   border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer;
 }
+.p-head { display: grid; grid-template-columns: 92px 1fr; gap: 14px; align-items: start; margin-right: 34px; }
+.p-photo {
+  display: block; width: 92px; height: 120px; padding: 0; border: 1px solid var(--line); border-radius: 10px;
+  overflow: hidden; background: #fff; cursor: zoom-in;
+}
+.p-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.p-photo.none {
+  display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; cursor: default;
+  border-style: dashed; background: var(--surface-2); color: var(--muted); font-size: 13px; line-height: 1.3;
+}
+.p-credit { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+.p-credit .src-links { display: inline-flex; margin-left: 8px; }
 .p-role { font: italic 15px 'PT Serif', Georgia, serif; color: var(--muted); }
 .p-name { font: 700 23px/1.2 'PT Serif', Georgia, serif; margin: 2px 0 4px; }
 .p-name.found { color: var(--found-ink); }
@@ -305,6 +326,8 @@ dialog.scan img { display: block; max-width: 100%; max-height: 74vh; margin: 0 a
     position: fixed; left: 0; right: 0; bottom: 0; top: auto; width: auto; max-height: 74vh;
     border-radius: 18px 18px 0 0; z-index: 50; padding-bottom: 28px;
   }
+  .p-head { grid-template-columns: 76px 1fr; gap: 12px; }
+  .p-photo { width: 76px; height: 100px; }
   .rel-row { grid-template-columns: 1fr; gap: 4px; }
   .rel-l { padding-top: 0; }
 }
