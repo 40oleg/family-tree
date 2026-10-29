@@ -393,21 +393,29 @@
   const panel = document.getElementById('panel');
   let selectedId = null;
 
+  // Связи-предположения (r: 'hyp') идут отдельно, в строки «Возможные …».
   function family(id) {
-    const r = { parents: [], spouses: [], children: [], siblings: [] };
+    const r = { parents: [], maybeParents: [], spouses: [], children: [], maybeChildren: [], siblings: [], maybeSiblings: [] };
+    const weak = c => c.r === 'hyp';
     D.unions.forEach(u => {
-      const kids = (u.children || []).map(c => c.id);
+      const kids = u.children || [];
       if (u.partners.includes(id)) {
         u.partners.forEach(x => { if (x !== id) r.spouses.push(x); });
-        r.children.push(...kids);
+        kids.forEach(c => (weak(c) ? r.maybeChildren : r.children).push(c.id));
       }
-      if (kids.includes(id)) {
-        r.parents.push(...u.partners);
-        kids.forEach(x => { if (x !== id) r.siblings.push(x); });
+      const me = kids.find(c => c.id === id);
+      if (me) {
+        (weak(me) ? r.maybeParents : r.parents).push(...u.partners);
+        kids.forEach(c => { if (c.id !== id) (weak(me) || weak(c) ? r.maybeSiblings : r.siblings).push(c.id); });
       }
     });
-    const uniq = a => [...new Set(a)].map(x => byId[x]);
-    return { parents: uniq(r.parents), spouses: uniq(r.spouses), children: uniq(r.children), siblings: uniq(r.siblings) };
+    const uniq = (a, sure) => [...new Set(a)].filter(x => !(sure || []).includes(x)).map(x => byId[x]);
+    return {
+      parents: uniq(r.parents), maybeParents: uniq(r.maybeParents, r.parents),
+      spouses: uniq(r.spouses),
+      children: uniq(r.children), maybeChildren: uniq(r.maybeChildren, r.children),
+      siblings: uniq(r.siblings), maybeSiblings: uniq(r.maybeSiblings, r.siblings)
+    };
   }
 
   const chip = r => h('span', { class: 'chip r-' + r }, REL[r] || r);
@@ -446,7 +454,9 @@
   }, q.n1 + (q.y ? ` (${q.y})` : ''));
 
   function relBlock(fam) {
-    const rows = [['Родители', fam.parents], ['Муж / жена', fam.spouses], ['Братья и сёстры', fam.siblings], ['Дети', fam.children]]
+    const rows = [['Родители', fam.parents], ['Возможные родители', fam.maybeParents], ['Муж / жена', fam.spouses],
+      ['Братья и сёстры', fam.siblings], ['Возможные братья и сёстры', fam.maybeSiblings],
+      ['Дети', fam.children], ['Возможные дети', fam.maybeChildren]]
       .filter(([, arr]) => arr.length);
     if (!rows.length) return null;
     return h('div', { class: 'p-rel' }, h('h3', {}, 'Родные в дереве'),
@@ -507,7 +517,7 @@
     if (p.hyp && !showHyp) setHyp(true);
     selectedId = id;
     const fam = family(id);
-    const near = new Set([id].concat(fam.parents, fam.spouses, fam.children, fam.siblings).map(q => (typeof q === 'string' ? q : q.id)));
+    const near = new Set([id].concat(...Object.values(fam)).map(q => (typeof q === 'string' ? q : q.id)));
     svg.classList.add('focus');
     gNodes.querySelectorAll('.node').forEach(n => {
       n.classList.toggle('sel', n.dataset.id === id);
