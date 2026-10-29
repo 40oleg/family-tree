@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Родословная Илюшкиных и Шалагиных</title>
+<meta name="description" content="Интерактивное родословное дерево семей Илюшкиных, Шалагиных и Пановых из Весьегонского края. Зелёным отмечено найденное в ходе исследования; у каждого факта есть источник и оценка надёжности.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 11v6M8 21v-4h16v4' fill='none' stroke='%231c7a3c' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='7' r='5' fill='%231c7a3c'/%3E%3Ccircle cx='8' cy='25' r='5' fill='%231c7a3c'/%3E%3Ccircle cx='24' cy='25' r='5' fill='%231c7a3c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <p class="kicker">Весьегонский край · Тверская и Вологодская области</p>
+    <h1>Родословная: Илюшкины, Шалагины, Пановы</h1>
+    <p class="lead">Дерево построено по рассказам семьи и найденным архивным документам. <span class="g">Зелёным</span> отмечено то, что найдено в ходе исследования: люди, места и факты. У каждого факта есть источник и оценка надёжности.</p>
+    <div class="stats" id="stats"></div>
+    <p class="updated" id="updated"></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Разделы">
+  <div class="wrap">
+    <a href="#tree">Дерево</a>
+    <a href="#findings">Новые находки</a>
+    <a href="#places">Места</a>
+    <a href="#candidates">Возможные родственники</a>
+    <a href="#plan">Что дальше</a>
+    <a href="#sources">Источники</a>
+  </div>
+</nav>
+
+<main>
+  <section id="tree" class="tree-section">
+    <div class="wrap wide">
+      <div class="toolbar">
+        <div class="legend" aria-label="Обозначения">
+          <span class="lg"><svg width="26" height="16" aria-hidden="true"><rect class="lg-card found" x="1" y="1" width="24" height="14" rx="4"/></svg>найдено исследованием</span>
+          <span class="lg"><svg width="26" height="16" aria-hidden="true"><rect class="lg-card" x="1" y="1" width="24" height="14" rx="4"/></svg>известно от семьи</span>
+          <span class="lg"><svg width="26" height="16" aria-hidden="true"><rect class="lg-card hyp" x="1" y="1" width="24" height="14" rx="4"/></svg>возможный родственник</span>
+          <span class="lg"><svg width="32" height="10" aria-hidden="true"><path class="lg-e found" d="M1 5H31"/></svg>связь найдена</span>
+          <span class="lg"><svg width="32" height="10" aria-hidden="true"><path class="lg-e" d="M1 5H31"/></svg>документ или семья</span>
+          <span class="lg"><svg width="32" height="10" aria-hidden="true"><path class="lg-e prob" d="M1 5H31"/></svg>вероятно</span>
+          <span class="lg"><svg width="32" height="10" aria-hidden="true"><path class="lg-e hyp" d="M1 5H31"/></svg>предположение</span>
+        </div>
+        <div class="controls">
+          <input type="search" id="search" list="people-list" placeholder="Найти человека…" aria-label="Найти человека" autocomplete="off">
+          <datalist id="people-list"></datalist>
+          <label class="toggle"><input type="checkbox" id="hyp-toggle"> Возможные родственники</label>
+          <div class="zoom">
+            <button type="button" class="btn" id="zoom-out" aria-label="Отдалить">−</button>
+            <button type="button" class="btn" id="zoom-in" aria-label="Приблизить">+</button>
+            <button type="button" class="btn" id="zoom-fit">Всё дерево</button>
+            <button type="button" class="btn" id="zoom-me">К Олегу</button>
+          </div>
+        </div>
+      </div>
+      <div class="canvas">
+        <svg id="tree-svg" role="group" aria-label="Родословное дерево"></svg>
+        <aside id="panel" class="panel" hidden aria-live="polite"></aside>
+      </div>
+      <p class="hint">Колёсико мыши или два пальца — масштаб, перетаскивание — сдвиг. Нажмите на человека, чтобы открыть факты и источники. Наведите на линию, чтобы увидеть, чем подтверждена связь.</p>
+      <noscript><p class="hint">Для интерактивного дерева нужен JavaScript.</p></noscript>
+    </div>
+  </section>
+
+  <section id="findings" class="section">
+    <div class="wrap">
+      <h2>Новые находки</h2>
+      <p class="sub">Главное, что дало исследование 28–29 октября 2026 г. Ниже — все найденные факты по людям, каждый с источником.</p>
+      <div id="findings-body"></div>
+    </div>
+  </section>
+
+  <section id="places" class="section">
+    <div class="wrap">
+      <h2>Места</h2>
+      <p class="sub">Где жила семья и что об этих местах удалось узнать. Зелёные карточки — места, найденные в ходе исследования; в остальных зелёным выделены новые факты.</p>
+      <div id="places-body"></div>
+    </div>
+  </section>
+
+  <section id="candidates" class="section">
+    <div class="wrap">
+      <h2>Возможные родственники и однофамильцы</h2>
+      <p class="sub">Эти люди могут быть нашими, но доказательств нет. Для каждого указано, что совпадает и что не совпадает. В дерево как факт они не внесены; часть из них можно показать переключателем «Возможные родственники» над деревом.</p>
+      <div id="candidates-body"></div>
+    </div>
+  </section>
+
+  <section id="plan" class="section">
+    <div class="wrap">
+      <h2>Что дальше</h2>
+      <p class="sub">Запросы в архивы и вопросы к родным, которые могут продвинуть дерево дальше.</p>
+      <div id="plan-body"></div>
+    </div>
+  </section>
+
+  <section id="sources" class="section">
+    <div class="wrap">
+      <h2>Источники</h2>
+      <p class="sub">Все документы и публикации, на которые опирается дерево. Фрагменты сканов взяты из открытых баз Минобороны: ОБД «Мемориал», «Память народа», «Память героев Великой войны» (gwar.mil.ru).</p>
+      <div id="sources-body"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Надёжность.</b> «Подтверждено документом» — факт прямо записан в документе. «Вероятно» — сходится несколько признаков, но прямого документа нет. «Предположение» — гипотеза, её нужно проверить. «Со слов семьи» — рассказ родных.</p>
+    <p>О живущих родственниках на сайте только имена. Исследование и сайт подготовлены с помощью Claude (Anthropic) в октябре 2026 г.</p>
+  </div>
+</footer>
+
+<dialog id="scan" class="scan" aria-label="Скан документа">
+  <button type="button" class="btn scan-close" aria-label="Закрыть">×</button>
+  <img alt="">
+  <div class="scan-body">
+    <p class="scan-cap"></p>
+    <p class="scan-src"></p>
+    <a class="scan-link" target="_blank" rel="noopener">Открыть источник</a>
+  </div>
+</dialog>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
