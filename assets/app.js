@@ -641,12 +641,23 @@
       h('ul', { class: 'facts' }, facts.map(factItem))))));
   }
 
+  function placePhotos(pl) {
+    if (!pl.photos || !pl.photos.length) return null;
+    return h('div', { class: 'pl-photos' }, pl.photos.map(ph => h('figure', {},
+      h('button', {
+        type: 'button', class: 'pl-photo', title: 'Открыть фото',
+        onclick: () => openScan({ src: ph.src, cap: ph.cap }, { t: ph.credit, urls: ph.page ? [['страница файла', ph.page]] : [] })
+      }, h('img', { src: ph.src, alt: ph.cap, loading: 'lazy' })),
+      h('figcaption', {}, ph.cap, h('span', { class: 'pl-credit' }, ph.credit)))));
+  }
+
   function renderPlaces() {
     document.getElementById('places-body').append(h('div', { class: 'cards' }, D.places.map(pl => h('article', { class: 'card-p place' + (pl.f ? ' found' : '') },
       h('header', {},
         h('div', { class: 'cp-role' }, pl.f ? 'новое место' : 'известно от семьи'),
         h('h4', {}, pl.name),
         pl.sub ? h('div', { class: 'cp-y' }, pl.sub) : null),
+      placePhotos(pl),
       h('ul', { class: 'facts' }, pl.facts.map(factItem)),
       pl.people && pl.people.length
         ? h('div', { class: 'cp-people' }, h('span', { class: 'rel-l' }, 'Люди'), pl.people.map(id => personBtn(byId[id], () => showInTree(id))))
