@@ -211,8 +211,13 @@
 
   function drawGenLabels() {
     gLabels.textContent = '';
-    const left = Math.min(...visible().map(p => cx(p) - NW / 2)) - 28;
-    (D.genLabels || []).forEach((t, i) => gLabels.append(sv('text', { x: left, y: i * RY + NH / 2 + 4 }, t.toUpperCase())));
+    const vis = visible();
+    const left = Math.min(...vis.map(p => cx(p) - NW / 2)) - 28;
+    const gens = new Set(vis.map(p => p.gen));
+    const from = D.genFrom || 0;
+    (D.genLabels || []).forEach((t, i) => {
+      if (gens.has(from + i)) gLabels.append(sv('text', { x: left, y: (from + i) * RY + NH / 2 + 4 }, t.toUpperCase()));
+    });
   }
 
   // Длинные имена ужимаются по ширине карточки, плашки «новое» подгоняются под текст.
@@ -262,7 +267,7 @@
     return {
       x1: Math.min(...vis.map(p => cx(p) - NW / 2)) - 150,
       x2: Math.max(...vis.map(p => cx(p) + NW / 2)) + 24,
-      y1: -30,
+      y1: Math.min(...vis.map(top)) - 52,
       y2: Math.max(...vis.map(p => top(p) + NH)) + 24
     };
   }
