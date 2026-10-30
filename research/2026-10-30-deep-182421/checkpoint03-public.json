@@ -1,0 +1,43 @@
+{
+  "checkpoint": 3,
+  "recordedAt": "2026-10-30T21:14:33.075Z",
+  "status": "Исследование продолжается",
+  "addedPeople": [
+    "alexandra_pa",
+    "hero_kolka",
+    "hero_vanya",
+    "hero_lyuska"
+  ],
+  "allResearchCardsGreen": true,
+  "familySuppliedChildrenOrdinary": [
+    "yulia",
+    "aleksey"
+  ],
+  "newProvenMainAncestors": 0,
+  "newEvidence": [
+    {
+      "person": "alexandra_pa",
+      "event": "Рождение и крещение14.04.1846ст.ст.,Лекма; родители Прокопий Алексеев и Вера Никифорова",
+      "source": "mkShalAlexandra1846",
+      "boundary": "Принадлежность к семье документирована; связь с Кузьмой1926 не доказана."
+    },
+    {
+      "people": [
+        "hero_kolka",
+        "hero_vanya",
+        "hero_lyuska"
+      ],
+      "source": "morchin1990family",
+      "boundary": "Имена из литературно-документального воспоминания. Сыновья Колька/Ваня —prob; отцовство Николая для Люськи —hyp. Связи с основной ветвью нет."
+    },
+    {
+      "person": "alexey_ya",
+      "source": "obd104",
+      "event": "Кандидатский номер5150483; вероятное чтение КраснаяЛоша вместо индексного КраснаяДома отделено от факта."
+    }
+  ],
+  "heroFamilyQuestion": "Общие родители Николая1908 и Алексея1913 не установлены. Их братство и связь с Андреем≈1883 остаются гипотезами.",
+  "correctedArchiveRoutes": 6,
+  "archiveViewing": "ГАВО496/66/174 читается в авторизованном пользователем Chrome; без заказов и оплаты. На момент записи прочитана только часть1883г.; отрицательный результат за весьгод не заявляется.",
+  "ordersOrPayments": false
+}
