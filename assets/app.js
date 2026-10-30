@@ -167,6 +167,7 @@
   }
 
   function pillFor(p) {
+    if (p.f && p.hyp) return { t: 'новое · гипотеза', c: 'found' };
     if (p.hyp) return { t: 'гипотеза', c: 'hyp' };
     if (p.f) return { t: p.r === 'prob' ? 'новое · вероятно' : 'новое', c: 'found' };
     return null;
@@ -620,7 +621,7 @@
       + D.places.reduce((n, pl) => n + pl.facts.filter(isNew).length, 0);
     document.getElementById('stats').append(
       stat(main.length, 'человек в дереве'),
-      stat(main.filter(p => p.f).length, 'новых людей', true),
+      stat(D.people.filter(p => p.f).length, 'новых людей', true),
       stat(facts, 'новых сведений и уточнений', true),
       stat(D.places.filter(pl => pl.f).length, 'новых мест', true),
       stat(D.people.filter(p => p.hyp).length, 'возможных родственников'));
