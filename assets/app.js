@@ -445,7 +445,7 @@
   function factItem(fa) {
     return h('li', { class: 'fact' + (fa.f ? ' found' : '') + (fa.r === 'neg' ? ' neg' : '') },
       h('p', { class: 'fact-t' }, fa.t),
-      h('div', { class: 'fact-m' }, fa.f ? h('span', { class: 'newtag' }, 'найдено') : null, chip(fa.r)),
+      h('div', { class: 'fact-m' }, fa.f ? h('span', { class: 'newtag' }, 'НОВОЕ') : null, chip(fa.r)),
       srcBlock(fa.s));
   }
 
@@ -479,7 +479,7 @@
     const badge = p.hyp
       ? h('span', { class: 'badge hyp' }, 'возможный родственник — родство не доказано')
       : p.f ? h('span', { class: 'badge found' }, 'найден в ходе исследования')
-        : h('span', { class: 'badge known' }, 'известен от семьи');
+        : h('span', { class: 'badge known' }, 'известен ранее');
     const photoSrc = p.photo && D.sources[p.photo.s];
     append(panel, [
       h('button', { type: 'button', class: 'p-close', 'aria-label': 'Закрыть карточку', onclick: clearSelection }, '×'),
@@ -620,7 +620,7 @@
       + D.places.reduce((n, pl) => n + pl.facts.filter(isNew).length, 0);
     document.getElementById('stats').append(
       stat(main.length, 'человек в дереве'),
-      stat(main.filter(p => p.f).length, 'найдены в ходе исследования', true),
+      stat(main.filter(p => p.f).length, 'новых людей', true),
       stat(facts, 'новых фактов с источниками', true),
       stat(D.places.filter(pl => pl.f).length, 'новых мест', true),
       stat(D.people.filter(p => p.hyp).length, 'возможных родственников'));
@@ -646,7 +646,9 @@
 
     const order = D.people.filter(p => !p.hyp).concat(D.people.filter(p => p.hyp));
     const groups = order.map(p => ({ p, facts: p.facts.filter(isNew) })).filter(g => g.facts.length);
-    root.append(h('h3', { class: 'sub-h' }, 'Все находки по людям'));
+    root.append(h('h3', { class: 'sub-h' }, 'Новые сведения по людям'));
+    if (!groups.length && !D.highlights.length) root.append(h('p', {}, 'Новые результаты будут добавлены после проверки источников.'));
+    if (D.previousHighlights && D.previousHighlights.length) root.append(h('details', {}, h('summary', {}, 'Ранее установленные сведения'), h('ol', { class: 'highlights' }, D.previousHighlights.map(x => h('li', {}, h('p', {}, x.t), sourceLine(x.s))))));
     root.append(h('div', { class: 'cards' }, groups.map(({ p, facts }) => h('article', { class: 'card-p' + (p.f ? ' found' : '') + (p.hyp ? ' hyp' : '') },
       h('header', {},
         h('div', { class: 'cp-role' }, p.role),
@@ -669,7 +671,7 @@
   function renderPlaces() {
     document.getElementById('places-body').append(h('div', { class: 'cards' }, D.places.map(pl => h('article', { class: 'card-p place' + (pl.f ? ' found' : '') },
       h('header', {},
-        h('div', { class: 'cp-role' }, pl.f ? 'новое место' : 'известно от семьи'),
+        h('div', { class: 'cp-role' }, pl.f ? 'новое место' : 'известно ранее'),
         h('h4', {}, pl.name),
         pl.sub ? h('div', { class: 'cp-y' }, pl.sub) : null),
       placePhotos(pl),
