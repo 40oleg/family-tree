@@ -621,7 +621,7 @@
     document.getElementById('stats').append(
       stat(main.length, 'человек в дереве'),
       stat(main.filter(p => p.f).length, 'новых людей', true),
-      stat(facts, 'новых фактов с источниками', true),
+      stat(facts, 'новых сведений и уточнений', true),
       stat(D.places.filter(pl => pl.f).length, 'новых мест', true),
       stat(D.people.filter(p => p.hyp).length, 'возможных родственников'));
     document.getElementById('updated').textContent = `Обновлено ${D.updated}. ${D.status}`;
@@ -640,6 +640,7 @@
   function renderFindings() {
     const root = document.getElementById('findings-body');
     root.append(h('ol', { class: 'highlights' }, D.highlights.map(x => h('li', {},
+      h('span', { class: 'newtag' }, 'НОВОЕ · 30.10.2026'),
       h('p', {}, x.t),
       h('div', { class: 'hl-m' }, x.ids.map(id => personBtn(byId[id], () => showInTree(id)))),
       sourceLine(x.s)))));
@@ -648,7 +649,7 @@
     const groups = order.map(p => ({ p, facts: p.facts.filter(isNew) })).filter(g => g.facts.length);
     root.append(h('h3', { class: 'sub-h' }, 'Новые сведения по людям'));
     if (!groups.length && !D.highlights.length) root.append(h('p', {}, 'Новые результаты будут добавлены после проверки источников.'));
-    if (D.previousHighlights && D.previousHighlights.length) root.append(h('details', {}, h('summary', {}, 'Ранее установленные сведения'), h('ol', { class: 'highlights' }, D.previousHighlights.map(x => h('li', {}, h('p', {}, x.t), sourceLine(x.s))))));
+    if (D.previousHighlights && D.previousHighlights.length) root.append(h('details', {}, h('summary', {}, 'Ранее установленные сведения'), h('ol', { class: 'highlights previous-highlights' }, D.previousHighlights.map(x => h('li', {}, h('p', {}, x.t), sourceLine(x.s))))));
     root.append(h('div', { class: 'cards' }, groups.map(({ p, facts }) => h('article', { class: 'card-p' + (p.f ? ' found' : '') + (p.hyp ? ' hyp' : '') },
       h('header', {},
         h('div', { class: 'cp-role' }, p.role),

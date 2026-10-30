@@ -343,3 +343,8 @@ dialog.scan img { display: block; max-width: 100%; max-height: 74vh; margin: 0 a
 @media (prefers-reduced-motion: reduce) {
   .node, .ug { transition: none; }
 }
+
+/* Предыдущие результаты сохраняются без маркировки нового раунда. */
+.previous-highlights li { background: var(--surface); border-color: var(--line); }
+.previous-highlights p { color: var(--ink); }
+.previous-highlights li::marker { color: var(--ink-2); }
