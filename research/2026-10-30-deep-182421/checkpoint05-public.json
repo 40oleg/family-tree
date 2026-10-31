@@ -1,0 +1,108 @@
+{
+  "checkpoint": 5,
+  "checkedAt": "2026-10-31T00:58:19.682Z",
+  "status": "research_in_progress",
+  "newCardsThisCheckpoint": 9,
+  "totalPeople": 76,
+  "newGreenResearchCards": 24,
+  "newProvenDirectAncestors": 0,
+  "newProvenLinksToMainBranch": 0,
+  "findings": [
+    {
+      "type": "documented_candidate_families",
+      "ref": "ГАВО496/66/183,лл51об–53,образы53–55",
+      "people": [
+        "fedor_i1882",
+        "ksenia_n1882",
+        "yakov_f1882",
+        "andrey_f1882",
+        "stepan_i1882",
+        "marfa_il1882",
+        "ivan_st1882",
+        "sergiy_st1882"
+      ],
+      "proof": "В рождении Андрея1882 Яков прямо назван сыном Фёдора;в рождении Сергия1882 Иван прямо назван сыном Степана. Супруги названы,матери младенцев установлены.",
+      "limits": "Связь с основной ветвью и братство Фёдора/Степана не доказаны; матери старших сыновей не присвоены. МладенецАндрейумер16.09.1882."
+    },
+    {
+      "type": "probable_identification",
+      "ref": "ГАВО496/66/183,л95об–96,образ98,м17",
+      "person": "andrey",
+      "candidateMother": "nadezhda_y1884",
+      "reading": "Андрей11/12августа1884,Глинское;ЯковИвановИлюшкин иНадеждаАрхипова;восприемникИванСтефановИлюшкин.",
+      "limits": "Тождество с прадедом вероятно. Возраст31в1915 против32в прежней выписке; нового взрослого документа с точной датой не найдено. Надежда отдельная кандидатная карточка без родительских связей к основным братьям."
+    }
+  ],
+  "boundedReading": {
+    "sobor1883": {
+      "images": [
+        73,
+        81
+      ],
+      "male": 29,
+      "female": 25,
+      "boundary": 82,
+      "andrey": 0,
+      "yearTotal": "Подсчёт записей; отдельная годовая строка не обнаружена."
+    },
+    "sobor1882": {
+      "images": [
+        53,
+        59
+      ],
+      "scope": "Август–декабрь, не полный год; поздний Андрей22изРаменья имеет другого отцаСемёна."
+    },
+    "vauch1879": {
+      "images": [
+        1,
+        18
+      ],
+      "maleScope": "5–35 доначалаавгуста;№1–4непрочитаны,полныйгоднепройден."
+    },
+    "sobor1884": "Чтение продолжается; полнота года на моментcheckpointне заявляется."
+  },
+  "archiveRoutes": {
+    "digitized": "496/66/183,1880–1889",
+    "notDigitized": [
+      "496/18/79т4:собор1878лл106–128об",
+      "496/18/86т7:собор1879–1880лл47–94",
+      "496/18/102т4:собор1883лл1–26",
+      "496/59/87:собор1908лл1–43об",
+      "496/59/235:собор1913лл1–44об"
+    ]
+  },
+  "uiAudit": {
+    "cardOverlaps": 0,
+    "groupOverlaps": 0,
+    "textOverflow": 0,
+    "ordinaryChildren": [
+      "yulia",
+      "aleksey"
+    ],
+    "newHypothesesGreen": true
+  },
+  "assets": [
+    {
+      "path": "img/sobor1882-glinsko-fedor.png",
+      "bytes": 719463,
+      "magic": "89504e47"
+    },
+    {
+      "path": "img/sobor1882-glinsko-stepan.png",
+      "bytes": 554420,
+      "magic": "89504e47"
+    },
+    {
+      "path": "img/sobor1882-august-header.png",
+      "bytes": 632468,
+      "magic": "89504e47"
+    },
+    {
+      "path": "img/sobor1884-andrey17.jpg",
+      "bytes": 553944,
+      "magic": "ffd8ffe1"
+    }
+  ],
+  "orders": false,
+  "payments": false
+}
