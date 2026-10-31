@@ -9,7 +9,9 @@
     "deadlineUtc": "2026-10-31T02:24:21.530Z",
     "primaryReadingStoppedAt": "2026-10-31T02:04:36.000Z",
     "preparedAt": "2026-10-31T02:07:31.907Z",
-    "note": "Время по часам не означает непрерывное чтение. После первичного поиска выполнены подготовка отчёта, проверка и публикация."
+    "note": "Временные отметки не означают непрерывную работу. Первичный поиск/чтение закончены за7ч40мин14с. Окончательная техническая проверка и закрытие журнала вышли за плановый срок; после02:04нового первичного поиска не велось.",
+    "closedAt": "2026-10-31T07:49:55.381Z",
+    "publicVisualVerifiedAt": "2026-10-31T02:28:17.732Z"
   },
   "snapshot": {
     "baselinePeople": 50,
@@ -28,11 +30,13 @@
     "warning": "Количество карточек/ключейисточников не равно новым родственникам/независимымдоказательствам."
   },
   "publication": {
-    "checkpoint": 6,
+    "dataCommit": "98e9c3011aadf68b80e99b218f993367c8fb1306",
+    "dataTree": "d9bef2d1e92e7be7519dd587affa8ee9c001e6c4",
+    "deployment": "success",
+    "run": 41159243357,
     "site": "https://40oleg.github.io/family-tree/",
     "report": "https://40oleg.github.io/family-tree/research-2026-10-31.html",
-    "commit": "См.историюэтогопубликационногопакета",
-    "previousCommit": "27d83e822063375377529d81608ac61ada8d2be3"
+    "liveVisualVerified": true
   },
   "checkpoints": [
     {
@@ -4439,7 +4443,8 @@
     "cardOverlaps": 0,
     "groupOverlaps": 0,
     "textOverflow": 0,
-    "independentReview": "checkpoint06-independent-review.json"
+    "independentReview": "checkpoint06-independent-review.json",
+    "liveVisualVerified": true
   },
   "finalReport": "report-final.txt",
   "note": "Итог ограниченного по времени этапа. Нерешённые родственные переходы не объявлены доказанными. Успешность развёртывания этого пакета проверяется отдельно и записывается в state.json.",
@@ -4448,5 +4453,6 @@
     "coupleChildren": "Мария,Андрей—справаотсерединыпары",
     "busSeparationUnits": 0.5,
     "knownMainPositionsUnchanged": true
-  }
+  },
+  "finalCompletionAudit": "closeout-audit.json"
 }

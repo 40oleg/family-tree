@@ -1,0 +1,60 @@
+{
+  "sessionName": "2026-10-30-deep-182421",
+  "objectiveFile": "C:/Users/helgus/.codex/attachments/f0d282dd-205d-4ee1-b6b3-4a1782a1530b/goal-objective.md",
+  "status": "bounded_session_complete",
+  "started": "2026-10-30T18:24:21.53Z",
+  "researchLimitHours": 8,
+  "hardDeadlineUtc": "2026-10-31T02:24:21.53Z",
+  "primaryReadingStoppedAt": "2026-10-31T02:04:36.000Z",
+  "publicVisualVerifiedAt": "2026-10-31T02:28:17.732Z",
+  "closedAt": "2026-10-31T07:49:55.381Z",
+  "timeQualification": "Временные отметки не означают непрерывную работу. Первичный поиск/чтение закончены за7ч40мин14с. Окончательная техническая проверка и закрытие журнала вышли за плановый срок; после02:04нового первичного поиска не велось.",
+  "publication": {
+    "dataCommit": "98e9c3011aadf68b80e99b218f993367c8fb1306",
+    "dataTree": "d9bef2d1e92e7be7519dd587affa8ee9c001e6c4",
+    "deployment": "success",
+    "run": 41159243357,
+    "site": "https://40oleg.github.io/family-tree/",
+    "report": "https://40oleg.github.io/family-tree/research-2026-10-31.html",
+    "liveVisualVerified": true
+  },
+  "results": {
+    "people": 78,
+    "newResearchCards": 26,
+    "newProvenDirectAncestors": 0,
+    "newProvenMainLinks": 0,
+    "newConfirmedMainBiographicalFacts": 1,
+    "existingDateMeaningCorrections": 1
+  },
+  "constraints": {
+    "orders": 0,
+    "payments": 0,
+    "externalMessages": 0,
+    "livingPeople": "names only",
+    "ordinaryChildren": [
+      "yulia",
+      "aleksey"
+    ],
+    "grandmother": "Зоя"
+  },
+  "artifacts": {
+    "report": "report-final.txt",
+    "audit": "completion-audit-final.json",
+    "questions": "question-status-final.json",
+    "questionText": "question-status-final.txt",
+    "manifest": "file-manifest-final.json",
+    "closeout": "closeout-audit.json",
+    "detailedState": "state-before-final-closeout.json",
+    "localScreenshots": [
+      "evidence/checkpoint06-live-tree.png",
+      "evidence/checkpoint06-live-report.png"
+    ]
+  },
+  "nextResearch": [
+    "Поздний акт Андрея с точной датой рождения/родителями;браксМарией.",
+    "Рождениягероя1908иАлексея1913:496/59/87л1–43об.;496/59/235л1–44об.;неоцифрованы.",
+    "Поздний бракКузьмы/рождениядетей;рождениеи бракЕвдокии.",
+    "Продолжение496/66/183:смерти1881собраза41,непрочитано."
+  ],
+  "unresolvedQuestions": "question-status-final.json"
+}

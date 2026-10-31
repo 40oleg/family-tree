@@ -1,0 +1,142 @@
+{
+  "at": "2026-10-31T07:49:55.381Z",
+  "status": "complete_bounded_research_session",
+  "scope": "Исходная цель и дополнение о семье героя сохранены. Завершён ограниченный по времени этап; нерешённые генеалогические связи не объявлены установленными.",
+  "requirements": [
+    {
+      "requirement": "Исходнаябазаи прежниеизменения",
+      "evidence": "baseline/;backupdatafiles;parentgit tree сохранён",
+      "status": "verified_for_bounded_research_session"
+    },
+    {
+      "requirement": "Исходные8и актуальные15вопросов",
+      "evidence": "questions.json;question-status-final.json/.txt",
+      "status": "verified_for_bounded_research_session"
+    },
+    {
+      "requirement": "Всечетыренаправленияи семьягероя",
+      "evidence": "15вопросов,отраслевыежурналы,точныерешающиенедостающиедокументы",
+      "status": "verified_for_bounded_research_session"
+    },
+    {
+      "requirement": "Выпискиишифры/листы/источники/уверенность",
+      "evidence": "completion-audit-final.json;149sourcekeys;primaryreviewjournals",
+      "status": "verified_for_bounded_research_session"
+    },
+    {
+      "requirement": "Новое зелёное, семейные детиобычные, имяЗоя",
+      "evidence": "78people,26green;checkpoint06-local-audit.json",
+      "status": "verified_for_bounded_research_session"
+    },
+    {
+      "requirement": "Отдельнаяоценкафактовисвязей",
+      "evidence": "docfacts1881;probchildedges;КсениянематьАлександры",
+      "status": "verified_for_bounded_research_session"
+    },
+    {
+      "requirement": "Синтаксис,refs,изображения,отображение",
+      "evidence": "node--checkexit0;no danglingrefs;14старыхкартиноквparenttree;localgeometry0;publicChrome/screenshots",
+      "status": "verified_for_bounded_research_session"
+    },
+    {
+      "requirement": "Публикация",
+      "evidence": "98e9c3011aadf68b80e99b218f993367c8fb1306;run41159243357success;nativeChromeURL/AX/screenshot",
+      "status": "verified_for_bounded_research_session"
+    },
+    {
+      "requirement": "Итог7категорий,новизна,эффективность,следующиедействия",
+      "evidence": "report-final.txt;research-2026-10-31.html;file-manifest-final.json",
+      "status": "verified_for_bounded_research_session"
+    },
+    {
+      "requirement": "Неоплачивать/незаказывать/неотправлять",
+      "evidence": "0orders/0payments/0externalMessages;unsentdrafts",
+      "status": "verified_for_bounded_research_session"
+    },
+    {
+      "requirement": "Фактическоевремяиточкапродолжения",
+      "evidence": "state.json;stopped02:04:36;смерти1881образ41непрочитан",
+      "status": "verified_for_bounded_research_session"
+    }
+  ],
+  "missingRequiredDeliverables": [],
+  "unresolvedResearchQuestions": [
+    {
+      "id": "SH-01",
+      "status": "open",
+      "needed": "Поздний акт Кузьмы из Лекмы или рождение его ребёнка с отчеством Кузьмы; затем сопоставление с рождением Косьмы около 1848 г."
+    },
+    {
+      "id": "SH-02",
+      "status": "open",
+      "needed": "Метрическая запись рождения Степана 1898–1902 с именами родителей; запись брака Кузьмы с Прасковьей."
+    },
+    {
+      "id": "PA-01",
+      "status": "open",
+      "needed": "Рождение Евдокии или её брак со Степаном с именами родителей; альтернативно акт сестры с однозначной семейной привязкой."
+    },
+    {
+      "id": "PA-02",
+      "status": "open",
+      "needed": "Рождение Григория около 1869 г. с отцом Иваном; брак Григория/Прасковьи с происхождением невесты; при необходимости рождение Прасковьи."
+    },
+    {
+      "id": "IL-01",
+      "status": "probable_identity_unresolved",
+      "needed": "Брак взрослого Андрея с Марией, призывной/посемейный документ с датой11.08.1884 и/или полными родителями; полный верх госпитальной карточки."
+    },
+    {
+      "id": "BIO-01",
+      "status": "open",
+      "needed": "Учётно-послужной или призывной документ с датой/местом рождения и родными; либо персональный семейный документ со службой в указанной части."
+    },
+    {
+      "id": "BIO-02",
+      "status": "open",
+      "needed": "Медицинский оригинал, книга движения ППГ 979/следующего госпиталя, эвакуационный список или поимённое прибытие/выбытие из части."
+    },
+    {
+      "id": "BIO-03",
+      "status": "open",
+      "needed": "Браки, рождения детей, похозяйственные/домовые книги с составом семьи и перемещениями; по хутору — конкретный переселенческий список."
+    },
+    {
+      "id": "IL-02",
+      "status": "unresolved",
+      "needed": "Рождение Николая с полным именем отца и семейной географией; затем независимое соединение с Николаем 1916 г. и Андреем. Для начала 1879 — недостающая левая половина первых записей или второй экземпляр."
+    },
+    {
+      "id": "HERO-01",
+      "status": "open",
+      "needed": "Рождения/браки Николая и Алексея либо семейная домовая запись с именами родителей; для связи с основной ветвью — документ, соединяющий конкретных Яковов."
+    },
+    {
+      "id": "MAT-01",
+      "status": "open",
+      "needed": "Собственное рождение ребёнка и брак родителей; для девичьих фамилий — брачный акт либо последующие записи с родителями невесты."
+    },
+    {
+      "id": "BIO-04",
+      "status": "open",
+      "needed": "Акт рождения Зои; трудовая книжка, личная карточка или поимённый рабочий список предприятия."
+    },
+    {
+      "id": "BIO-05",
+      "status": "open",
+      "needed": "Акт рождения/брака Лидии или поздняя похозяйственная книга с составом семьи."
+    },
+    {
+      "id": "BIO-06",
+      "status": "open",
+      "needed": "Брак Марии либо домовая запись Каменки с девичьей фамилией, датой рождения, сыном и прежним адресом."
+    },
+    {
+      "id": "BIO-07",
+      "status": "open",
+      "needed": "Домовая/актовая запись с родителями, супругом или прежним местом проживания, связывающая кандидата с семейной Марией."
+    }
+  ],
+  "publicVisualVerifiedAt": "2026-10-31T02:28:17.732Z",
+  "previousGoalTurn": "progress:провереныживыепубличныекарточки/отчёт,сохраненыскриншоты;сейчасисправленустаревшийstate"
+}
