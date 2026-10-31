@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-31T01:52:43.004Z",
+  "source": {
+    "reference": "ГАВО,ф.496,оп.66,д.183",
+    "folios": "22об.–23,карандашнаянумерация;справастароекрасное28",
+    "image": 24,
+    "url": "https://gosarchive.gov35.ru/archive1/unit/453580#24",
+    "local": "research/2026-10-30-deep-182421/ilyushkins/gavo496-66-183-image0024.jpg",
+    "sha256": "e3eef4e9e69eaf2a0ce51d4a9c3be421ba9daea4fc3bf5ec571036f35649f4a3"
+  },
+  "record": {
+    "femaleNumber": 3,
+    "child": "Мария",
+    "birth": "23.01.1881,старыйстиль",
+    "baptism": "25.01.1881,старыйстиль",
+    "dateEvidence": "1881взаголовке;Январьнадпервойзаписью;нижняястрокаженская3сдатами23/25.",
+    "parents": "Деревни Глинска крестьянин Федор Иванов [межстрочная вставка фамилии: Илюшкин?] и законная жена его Ксения Никитина, оба православного исповедания.",
+    "godmotherDiplomatic": "Дочь е. родная, девица Александра Фед[орова].",
+    "godmotherExpanded": "Дочь его родная, девица Александра Федорова.",
+    "damagedText": "Конец патронима Фед[орова] частично закрыт реставрационной полосой; окончание дано как восстановление, не полностью видимые буквы."
+  },
+  "relationshipAssessment": {
+    "alexandraFather": {
+      "name": "Фёдор Иванов, отец младенцаМарии в этойже строке",
+      "status": "doc",
+      "basis": "Формула «Дочь е. родная» стоит в графе восприемников тойже записи и отсылает к отцу в родительскойграфе. Следом названа девицаАлександра с началом патронимаФед-. Не читаю буквальное «ДочьФедора»; связь задаёт местоимение.",
+      "confidence": "high"
+    },
+    "alexandraMother": {
+      "name": "КсенияНикитина",
+      "status": "unproved",
+      "basis": "Ксения прямо мать младенцаМарии и женаФёдора, но это не прямое сообщение о её материнстве для старшейАлександры."
+    },
+    "mariaParents": {
+      "father": "ФёдорИванов",
+      "mother": "КсенияНикитина",
+      "status": "doc"
+    },
+    "identityTo1882Family": {
+      "status": "Сопоставление по ФёдоруИванову/КсенииНикитиной и Глинску; фамильную межстрочную вставку сверять с полныморигиналом и вторым чтением.",
+      "limit": "ОтцовствоАлександры внутриэтойстроки не зависит от расширениячастичноскрытогопатронима. Связь1881/1882оценивать отдельно от чтенияформулы."
+    }
+  },
+  "readingConfidence": {
+    "givenNamesAndPatronymicsOfParents": "high",
+    "datesAndChildName": "high",
+    "godmotherNameAlexandra": "high",
+    "fatherDaughterFormula": "high",
+    "godmotherPatronymicEnding": "partly reconstructed because of restoration",
+    "insertedSurname": "medium; теснаямежстрочнаявставка читается менееуверенно, чем ФёдорИванов иКсенияНикитина; не использовать эту вырезку одну для решения Илюшкин/Илюхин"
+  },
+  "crops": [
+    "research/2026-10-30-deep-182421/ilyushkins/sobor1881-maria3-independent-full.png",
+    "research/2026-10-30-deep-182421/ilyushkins/sobor1881-maria3-independent-family.png"
+  ],
+  "noMainBranchMerge": true,
+  "siteChanged": false,
+  "chromeUsed": false
+}

@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-31T02:05:02.927Z",
+  "mode": "read_only_site_review",
+  "people": 78,
+  "green": 26,
+  "reviewedIDs": [
+    "maria_f1881",
+    "alexandra_f1881"
+  ],
+  "issues": [],
+  "verdict": "ready_for_publication",
+  "checks": {
+    "newFlagsCorrect": true,
+    "record1881FactsDoc": true,
+    "identityEdgesTo1882Prob": true,
+    "alexandraFatherOnly": true,
+    "noKseniaMotherForAlexandra": true,
+    "mainYakovX": 0.5,
+    "sourceImageExists": true,
+    "danglingPersonReferences": 0,
+    "syntax": "parsed"
+  },
+  "uiChecks": {
+    "source": "root DOM report",
+    "cardOverlaps": 0,
+    "groupOverlaps": 0,
+    "textOverflow": 0,
+    "independentlyRepeated": false
+  },
+  "scopeLimits": [
+    "Публичная публикация последней дельты этим агентом не проверена.",
+    "Графическое размещение принято по проверкеDOMroot; код и браузер не изменялись."
+  ],
+  "reportUpdated": "research/2026-10-30-deep-182421/report-final-ready.txt",
+  "unreadBoundary": "1881смерти:40титул;41непрочитан",
+  "publicationCommitPending": true,
+  "endTimePending": true
+}

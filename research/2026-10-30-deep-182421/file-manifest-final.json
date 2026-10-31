@@ -1,0 +1,120 @@
+{
+  "at": "2026-10-31T02:08:36.474Z",
+  "status": "final_payload",
+  "report": "research/2026-10-30-deep-182421/report-final.txt",
+  "mainChangedFiles": [
+    {
+      "path": "assets/data.js",
+      "exists": true,
+      "sha256": "8a7abfe3a1d287c5fa897b198fcda96b11daa2431dde0ef24f4c64452bccbc5d"
+    },
+    {
+      "path": "assets/app.js",
+      "exists": true,
+      "sha256": "25ab20f4119374b752e763219291d93ee799d3bae72e032219629a61796e918e"
+    },
+    {
+      "path": "assets/style.css",
+      "exists": true,
+      "sha256": "febf09480667119cc97abac81d9562aa1a728f9ff43264c6602e96f48d4d8589"
+    },
+    {
+      "path": "index.html",
+      "exists": true,
+      "sha256": "95e381acbd7f9d1ce496558ae8b0f3f48677d79e76b1c43cf0e4f40d48e823bc"
+    },
+    {
+      "path": "README.md",
+      "exists": true,
+      "sha256": "7202c73f8cf4318685a7c1dcd608bb6b3a70fc7cbe2d8458848563b3e43b7053"
+    }
+  ],
+  "newSourceImagesVsBaseline": [
+    {
+      "path": "img/sobor1884-andrey17.jpg",
+      "exists": true,
+      "bytes": 553944
+    },
+    {
+      "path": "img/sobor1882-glinsko-fedor.png",
+      "exists": true,
+      "bytes": 719463
+    },
+    {
+      "path": "img/sobor1882-glinsko-stepan.png",
+      "exists": true,
+      "bytes": 554420
+    },
+    {
+      "path": "img/sobor1882-august-header.png",
+      "exists": true,
+      "bytes": 632468
+    },
+    {
+      "path": "img/iv1860-panov-family.png",
+      "exists": true,
+      "bytes": 721140
+    },
+    {
+      "path": "img/iv1860-lekma244-family.jpg",
+      "exists": true,
+      "bytes": 377810
+    },
+    {
+      "path": "img/iv1847-lekma226-family.jpg",
+      "exists": true,
+      "bytes": 510135
+    },
+    {
+      "path": "img/iv1847-lekma224-title.jpg",
+      "exists": true,
+      "bytes": 989176
+    },
+    {
+      "path": "img/mk1840-lekma-marriage15.jpg",
+      "exists": true,
+      "bytes": 945023
+    },
+    {
+      "path": "img/sobor1881-maria3.jpg",
+      "exists": true,
+      "bytes": 542611
+    },
+    {
+      "path": "img/sobor1881-maria3.jpg",
+      "exists": true,
+      "bytes": 542611
+    }
+  ],
+  "researchDirectory": "research/2026-10-30-deep-182421/",
+  "primaryScanPatterns": [
+    "ilyushkins/gavo496-66-183-image*.jpg",
+    "ilyushkins/gavo496-66-174-image*.jpg",
+    "shalagins/scans/"
+  ],
+  "note": "Список публикационных изображений вычислен по source.img относительно baseline/family.json. Исследовательская папка содержит больше сканов, чем опубликовано на сайте; они не приравниваются к новым доказанным родственникам.",
+  "draftsPreserved": true,
+  "validation": {
+    "people": 78,
+    "researchGreen": 26,
+    "questions": 15,
+    "categories": 7,
+    "cardOverlaps": 0,
+    "groupOverlaps": 0,
+    "textOverflow": 0,
+    "ordinaryChildren": [
+      "yulia",
+      "aleksey"
+    ],
+    "independentReview": "checkpoint06-independent-review.json",
+    "endTime": "Первичное чтение закончено02:04:36UTC;публикацияпроверяетсяотдельно",
+    "sourceRegistry": 149
+  },
+  "addedFinalFiles": [
+    "research-2026-10-31.html",
+    "research/2026-10-30-deep-182421/report-final.txt",
+    "research/2026-10-30-deep-182421/question-status-final.json",
+    "research/2026-10-30-deep-182421/question-status-final.txt",
+    "research/2026-10-30-deep-182421/completion-audit-final.json"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-31T02:13:50.532Z",
+  "syntax": true,
+  "people": 78,
+  "uniqueIDs": 78,
+  "newGreen": 26,
+  "referenceErrors": [],
+  "missingImages": [],
+  "newEdges": [
+    {
+      "parents": [
+        "fedor_i1882"
+      ],
+      "child": "alexandra_f1881",
+      "r": "prob"
+    },
+    {
+      "parents": [
+        "fedor_i1882",
+        "ksenia_n1882"
+      ],
+      "child": "maria_f1881",
+      "r": "prob"
+    }
+  ],
+  "ordinaryChildren": [
+    {
+      "id": "yulia",
+      "f": false
+    },
+    {
+      "id": "aleksey",
+      "f": false
+    }
+  ],
+  "cardOverlaps": 0,
+  "groupOverlaps": 0,
+  "textOverflow": 0,
+  "preservedRemoteAssets": [
+    "img/obd311-shalagin-zhena.jpg",
+    "img/obd311-shalagin-rozhd.jpg",
+    "img/obd311-blok-1941.jpg",
+    "img/rvk1948-nikolay-zhena.jpg",
+    "img/rvk1947-aleksandr-otec.jpg",
+    "img/osbr62-aleksandr.jpg",
+    "img/card1915-andrey.jpg",
+    "img/georg1915-andrey.jpg",
+    "img/izm1916-nikolay.jpg",
+    "img/medal1945-mikhail.jpg",
+    "img/panov-kg-1916.jpg",
+    "img/obd104-alexey.jpg",
+    "img/nya-plaque-ploskovo.jpg",
+    "img/nya-plaque-tonshalovo.jpg"
+  ],
+  "externalImagesNotLocal": [
+    "polkrfNYa:https://polkrf.s3.regru.cloud/veterans/gallery/80/80957.jpg",
+    "polkrfNYa:https://polkrf.s3.regru.cloud/veterans/gallery/80/80958.jpg",
+    "moypolkNYa:https://cdn.moypolk.ru/static/resize/w800/soldiers/unknown/2020/03/31/a8b077fa0b403e926aeb1824b9f05661.jpg",
+    "moypolkNYa:https://cdn.moypolk.ru/static/resize/w800/soldiers/unknown/2020/03/28/5cbe7e5c09bf045ec53daefe7a50032f.jpg"
+  ],
+  "note": "Локальная копия не содержит14прежнихизображений;всеточки найденывнеусечённомродительскомgitдеревеи сохраняютсяпринаследованиибазовогоtree. ЧетыревнешнихURLнеявляютсялокальнымифайлами.",
+  "parentageLineLayout": "Отец-одиночка иего старшиедети слева;парасупругови младшиедетисправа,горизонтальныешинынеперекрываются.",
+  "dataSha256": "8a7abfe3a1d287c5fa897b198fcda96b11daa2431dde0ef24f4c64452bccbc5d",
+  "parentageBusGapUnits": 0.5,
+  "geometryCheck": "Координатныйконтрольпослеразделенияродительскихлиний;карточки/группынепересекаются,текстнеизменялся."
+}
