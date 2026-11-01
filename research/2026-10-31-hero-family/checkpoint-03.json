@@ -1,0 +1,146 @@
+{
+  "checkedAt": "2026-11-01T12:23:27.956Z",
+  "status": "active",
+  "verdict": "Родство основной семьи с ветвью Николая и Алексея не установлено и не опровергнуто.",
+  "metric1918": {
+    "source": "https://nashi-predki.ru/wiki/Метрические_книги._Богоявленский_собор._г.Весьегонск._1918_г.",
+    "archivalReference": null,
+    "provenance": "Q: опубликованные воспроизведения без установленного архивного шифра",
+    "publishedImagesDiscovered": 104,
+    "publishedImagesSavedAndViewed": 104,
+    "artifactCoverage": "Сверены все фактически обнаруженные filePages и SHA256 локальных копий. Полнота изображений публикации не равна полноте актовых записей.",
+    "birthSection": {
+      "annualAccountingTotal": 105,
+      "accountedPersonsInReadImages": 99,
+      "children": 98,
+      "adultAccession": 1,
+      "missingNumbers": {
+        "male": [
+          15,
+          16,
+          31,
+          32
+        ],
+        "female": [
+          16,
+          27
+        ]
+      },
+      "readabilityLimits": [
+        "Есть повторные и переставленные изображения.",
+        "Кадр с именем файла л12-2 пересвечен; некоторые графы читаются ограниченно.",
+        "Истории проверенных ошибочных файлов прежних копий пропущенных страниц не содержат."
+      ],
+      "result": "Надёжных целевых Илюшкиных/Ильюшкиных в читаемых графах не обнаружено. Полного отрицательного результата по рождениям нет."
+    },
+    "marriages": {
+      "screenedActs": 47,
+      "annualTotal": 47,
+      "actNumbers": "1–47",
+      "result": "Надёжных целевых совпадений среди брачующихся и поручителей не обнаружено.",
+      "sequenceLimit": "Переход названий файлов 45→53 сопровождается непрерывной нумерацией актов 34→35. Имена файлов не являются установленной архивной фолиацией."
+    },
+    "deaths": {
+      "screenedPersons": 142,
+      "annualTotal": 142,
+      "male": 61,
+      "female": 81,
+      "personalImageLabels": "58–81",
+      "summaryImageLabel": "82",
+      "result": "Надёжных целевых упоминаний или прямого семейного контекста не обнаружено.",
+      "limit": "Приютские записи не всегда содержат достаточную идентификацию; иные годы и приходы этим не исключены."
+    },
+    "geographicReading": {
+      "glinskoMentioned": true,
+      "positions": [
+        "изображение с именем файла л40, брак № 12",
+        "изображение с именем файла л53, брак № 38"
+      ],
+      "limit": "Доказывает упоминание деревни в отдельных актах 1918 года; не доказывает состав всей семьи или покрытие 1860 года."
+    },
+    "kinshipImplication": "Эта проверка не исключает родства, регистрации в ином месте/году и наличия целевых лиц в шести непокрытых номерах."
+  },
+  "biographicalSources": [
+    {
+      "title": "Герои Вологодчины",
+      "editionActuallyRead": 2020,
+      "requested2015EditionRead": false,
+      "pages": [
+        195,
+        196
+      ],
+      "url": "https://vologda-oblast.ru/o_regione/knigi-o-vologodskoy-oblasti/heroes.pdf",
+      "readStatus": "Вся целевая статья прочитана по PDF и визуально проверена.",
+      "dateAsPrinted": "04.11.1909–04.03.1980",
+      "familyFields": "Имена родителей, братьев, сестёр, супруги и детей отсутствуют в прочитанной статье. Упомянута неназванная семья при переезде1919.",
+      "neighbourExcluded": "Соседний текст о семье Николая Александровича Илюшичева к Илюшкину не переносится.",
+      "independenceGroup": "common-retrospective-biography-2005-2020"
+    },
+    {
+      "title": "Они прошли через войну…",
+      "edition": 2005,
+      "printedPage": 324,
+      "viewerPage": 323,
+      "url": "https://www.booksite.ru/fulltext/proshli/files/assets/basic-html/page-323.html",
+      "readStatus": "Прочитана вся официальная HTML-статья; полный растровый образ текста не получен.",
+      "dateInHTML": "4 ноября 1909 года",
+      "familyFields": "Названных родителей, братьев, сестёр, супруги и детей нет.",
+      "independenceGroup": "common-retrospective-biography-2005-2020"
+    },
+    {
+      "title": "Герои земли Череповецкой",
+      "readStatus": "Полный текст не получен. Содержание не объявляется проверенным."
+    }
+  ],
+  "birthYearRoute": {
+    "personId": "hero_nya",
+    "workingSiteDate": "14.11.1908",
+    "alternativeSecondaryDate": "04.11.1909",
+    "otherAwardYear": 1905,
+    "interpretation": "Дата рождения остаётся конфликтующей; новая книга не заменяет метрическую запись. Календарный стиль вторичных дат не установлен.",
+    "reference": "ГАВО, ф. 496, оп. 59, д. 91; соборная часть лл. 1–37 об.",
+    "url": "https://gosarchive.gov35.ru/archive1/unit/470211",
+    "catalogueRead": true,
+    "originalPersonalActsRead": false,
+    "digitized": false,
+    "availabilityLiteral": "Дело не оцифровано.",
+    "next": "Проверить родителей и тождество в вариантах 1905/1908/1909. Наличие целевого акта по каталогу неизвестно."
+  },
+  "outcome": {
+    "newProvenAncestors": 0,
+    "newProvenKinshipLinks": 0,
+    "newDocumentaryRefutations": 0,
+    "totalNewFactsOnSiteAcrossTheseCheckpoints": 2,
+    "newResearchCandidatesInReport": 1,
+    "newPeopleInGraph": 0
+  },
+  "rules": {
+    "orders": false,
+    "payments": false,
+    "externalMessages": false,
+    "unprovenBranchesMerged": false,
+    "livingPeoplePublic": "names only"
+  },
+  "separateResearchCandidate": {
+    "name": "Илюшкин Николай Константинович",
+    "birthYear": 1914,
+    "originAsPublished": "Глинское Ягницкого сельсовета",
+    "rankAsPublished": "сержант",
+    "draftAsPublished": "09.1941",
+    "demobilizationAsPublished": "10.1945",
+    "unitsAsPublished": [
+      "74-й отдельный зенитно-артиллерийский дивизион",
+      "658-й отдельный зенитно-пулемётный взвод"
+    ],
+    "source": {
+      "title": "Они прошли через войну…",
+      "year": 2005,
+      "printedPage": 152,
+      "viewerPage": 151,
+      "url": "https://www.booksite.ru/fulltext/proshli/files/assets/basic-html/page-151.html",
+      "readStatus": "Официальная HTML-запись прочитана; первичный военный документ не получен."
+    },
+    "relationship": "Родители и другие родственники не названы. Связь с Константином Яковлевичем, Николаем Яковлевичем и основной семьёй не установлена.",
+    "treeAction": "В родственные узлы не присоединён; представлен зелёным в отчёте как отдельный исследовательский кандидат."
+  }
+}
