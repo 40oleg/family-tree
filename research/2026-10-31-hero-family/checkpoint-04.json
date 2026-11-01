@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-11-01T16:46:06.256Z",
+  "status": "active",
+  "previousCheckpoint": "checkpoint-03.json",
+  "verdict": "Родство основной семьи с ветвью Николая и Алексея пока не установлено и не опровергнуто.",
+  "newControlDocument": {
+    "fatherLiteral": "Якова Иванова Грибанникова",
+    "fatherNormalized": "Яков Иванович Грибанников",
+    "place": "Глинское",
+    "child": "Алексей",
+    "ageMonths": 8,
+    "deathOS": "1885-07-27",
+    "burialOS": "1885-07-29",
+    "motherNamed": false,
+    "reference": "ГАВО, ф.496, оп.66, д.183, лл.121об.–122, мужская№11, образ130",
+    "url": "https://gosarchive.gov35.ru/archive1/unit/453580#130",
+    "reading": "Прочитан оригинальный метрический образ в архивном просмотрщике; чтение имени, отчества, фамилии, возраста и месяца независимо сверено.",
+    "factReliability": "doc",
+    "identityToIlyushkin1884": "Не установлено; фамилия отличается.",
+    "identityToGribannikov1881": "Возможно; не доказано по одной записи.",
+    "kinshipToHeroFamily": "Не установлено.",
+    "siteAction": "Отдельный зелёный контрольный блок в отчёте; родственные узлы не объединены."
+  },
+  "deathControl": {
+    "target": "Андрей, сын Якова Иванова Илюшкина и Надежды Архиповой, родившийся11августа1884; тождество прадеду не доказано",
+    "reference": "ГАВО, ф.496, оп.66, д.183",
+    "ranges": [
+      {
+        "year": 1884,
+        "maleNumbers": "12–14",
+        "images": [
+          113
+        ],
+        "leaves": "107об.–108",
+        "scope": "Мужские записи после рождения; первая часть1884заново не проверялась."
+      },
+      {
+        "year": 1885,
+        "maleNumbers": "1–18",
+        "images": [
+          125,
+          129,
+          130,
+          131,
+          132
+        ],
+        "leaves": "119об.–123об."
+      },
+      {
+        "year": 1886,
+        "maleNumbers": "1–9",
+        "images": [
+          155,
+          156,
+          157,
+          158
+        ],
+        "leaves": "140об.–144",
+        "nextYearBoundary": [
+          159,
+          160
+        ]
+      }
+    ],
+    "maleRecordsInTheseRanges": 30,
+    "targetDeathFound": false,
+    "otherAndrey": {
+      "year": 1886,
+      "maleNumber": 9,
+      "image": 158,
+      "literalName": "Андрей Григорьев",
+      "surnameEstablished": false,
+      "ageYears": 59,
+      "deathOS": "1886-11-04",
+      "burialOS": "1886-11-06",
+      "targetIdentity": false,
+      "exclusionBasis": "Возраст и отчество не соответствуют ребёнку1884года."
+    },
+    "limit": "Отрицательный результат относится только к указанным диапазонам данного дела. Он не доказывает выживания ребёнка, тождества взрослому или отсутствия события в других книгах/приходах.",
+    "nextYears": "Проверка1887–1889продолжается."
+  },
+  "outcome": {
+    "newProvenAncestors": 0,
+    "newProvenKinshipLinks": 0,
+    "kinshipRefuted": false,
+    "newPeopleInGraph": 0
+  },
+  "rules": {
+    "orders": false,
+    "payments": false,
+    "externalMessages": false,
+    "unprovenBranchesMerged": false,
+    "livingPeoplePublic": "names only"
+  }
+}
