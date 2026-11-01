@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-01",
+  "status": "research-in-progress",
+  "previousCheckpoint": "checkpoint-05.json",
+  "verdict": "Брак Якова Федорова Илюшкина1888 найден. Его тождество лицам1882/1889 и родство основной семье/ветви героя ещё не установлены.",
+  "newMarriage": {
+    "id": "ilyushkin-yakov-marriage1888-m8",
+    "source": {
+      "archive": "ГАВО",
+      "fonds": 496,
+      "inventory": 66,
+      "file": 183,
+      "folio": "178 об.–179",
+      "entryFolio": "178 об.",
+      "image": 199,
+      "marriageNumber": 8,
+      "url": "https://gosarchive.gov35.ru/archive1/unit/453580#199",
+      "captureSha256": "804a1de16d934d2e9a094df14ed5a300a0aff47e69513a8dd8615a8f3b82c4c3",
+      "captureType": "Native UI screenshot of original viewer; not original JPG"
+    },
+    "date": "1888-02-22",
+    "calendar": "old-style",
+    "groom": {
+      "givenName": "Яков",
+      "patronymicLiteral": "Федоров",
+      "surname": "Илюшкин",
+      "age": 23,
+      "place": "Глинско",
+      "statusLiteral": "крестьянский сын",
+      "marriageOrder": 1,
+      "birthDate": null,
+      "birthYearSearchRange": [
+        1864,
+        1865
+      ],
+      "birthYearRangeStatus": "inference from stated age, not a birth record",
+      "fatherFullNameEstablished": false
+    },
+    "bride": {
+      "givenNameLiteral": "Марья",
+      "patronymicLiteral": "Андреева",
+      "surname": null,
+      "surnameReadings": [
+        "Данилова",
+        "Данилина"
+      ],
+      "surnameStatus": "unresolved disagreement between independent readers",
+      "age": 20,
+      "place": "та же деревня",
+      "marriageOrder": 1
+    },
+    "groomWitnesses": [
+      {
+        "givenName": "Степан",
+        "patronymicLiteral": "Иванов",
+        "surname": "Илюшкин",
+        "relationshipToGroom": null
+      },
+      {
+        "givenName": null,
+        "patronymicLiteral": "Иванов",
+        "surname": "Илюшкин",
+        "givenNamePreferred": "Яков?",
+        "givenNameStatus": "unresolved; root and one reader prefer Yakov, another leaves blank",
+        "relationshipToGroom": null
+      }
+    ],
+    "commonWitnessSurnameLiteral": "Илюшкины",
+    "factConfidence": {
+      "groom": "high",
+      "date": "high",
+      "ages": "high",
+      "brideGivenPatronymic": "high",
+      "brideSurname": "unresolved",
+      "firstWitness": "high",
+      "secondWitnessGivenName": "unresolved"
+    },
+    "identities": {
+      "withGodfather1882": "unresolved",
+      "withTatianaFather1889": "unresolved",
+      "withMainAndreyFamily": "not-established",
+      "withHeroFather": "not-established"
+    },
+    "interpretationLimits": [
+      "Брак прямо документирован для названных в нём лиц; тождество людям из других актов не доказано.",
+      "Мать Татианы1889 в смерти не названа; Марью не записывать её матерью как установленный факт.",
+      "Поручители не названы родственниками жениха.",
+      "Полное имя отца Якова в браке не указано; Иванов к Федору из1882 не переносится.",
+      "Имя второго поручителя не установлено уверенно; связь с Яковом Ивановым из1884 не доказана.",
+      "Фамилия Марьи передаётся двумя конкурирующими чтениями."
+    ],
+    "independenceGroup": "GAVO-496-66-183-marriage1888-8"
+  },
+  "coverage": {
+    "years": [
+      {
+        "year": 1888,
+        "images": [
+          198,
+          199,
+          200
+        ],
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "rootRead": 10,
+        "independentReadScope": {
+          "boundariesReview": [
+            1,
+            2,
+            3,
+            4,
+            9,
+            10
+          ],
+          "detailedNewMarriageReview": [
+            8
+          ]
+        },
+        "segmentTotals": [
+          4,
+          4,
+          1,
+          1
+        ],
+        "targetMarriage": 8,
+        "boundary": "197 — титул;201 — ранее прочитанный титул смертей"
+      },
+      {
+        "year": 1889,
+        "images": [
+          219,
+          220,
+          221,
+          222
+        ],
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "rootRead": 10,
+        "independentRead": 10,
+        "segmentTotals": [
+          9,
+          1
+        ],
+        "targetGroomFound": false,
+        "boundary": "218 — титул;223 — ранее прочитанный титул смертей"
+      }
+    ],
+    "scope": "Прочитанные доступные номерные ряды этого дела, без утверждения исторической полноты; не все нецелевые поля транскрибированы.",
+    "repeatedOldRowsCountedAsNew": false
+  },
+  "goalLinksProven": 0,
+  "goalLinksRefuted": 0,
+  "sourceRecordMarriageConfirmed": true,
+  "peopleMerged": 0,
+  "graphChanged": false,
+  "restrictions": {
+    "orders": false,
+    "payments": false,
+    "externalMessages": false
+  }
+}
